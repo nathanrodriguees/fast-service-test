@@ -29,4 +29,10 @@ public class OpenApiConfig {
 		return GroupedOpenApi.builder().group("Prestadores").packagesToScan("br.com.fastservice.controller")
 				.pathsToMatch("/api/prestadores", "/api/prestadores/**").build();
 	}
+
+	@Bean
+	public GroupedOpenApi authApi() {
+		return GroupedOpenApi.builder().group("Autenticação").packagesToScan("br.com.fastservice.controller")
+				.pathsToMatch("/api/auth", "/api/auth/**").build();
+	}
 }
